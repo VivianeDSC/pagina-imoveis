@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóveis na Planta - Rio e Niterói</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header style="background-color: #001F3F; color: white; padding: 15px; text-align: center;">
+        <nav>
+            <a href="index.html" style="color: white; font-size: 20px; text-decoration: none; margin-right: 20px;">Home</a>
+            <select id="region-select" style="padding: 5px;">
+                <option value="todas">Todas as Regiões</option>
+                <option value="rio">Rio de Janeiro</option>
+                <option value="niteroi">Niterói</option>
+            </select>
+            <a href="contato.html" style="color: white; font-size: 20px; text-decoration: none; margin-left: 20px;">Contato</a>
+        </nav>
+    </header>
+    
+    <section class="carousel">
+        <button class="prev">&#10094;</button>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <a href="imovel1.html">
+                    <img src="imovel1.jpg" alt="Imóvel 1">
+                    <p>Imóvel 1 - Excelente Localização</p>
+                </a>
+            </div>
+            <div class="carousel-slide">
+                <a href="imovel2.html">
+                    <img src="imovel2.jpg" alt="Imóvel 2">
+                    <p>Imóvel 2 - Vista para o Mar</p>
+                </a>
+            </div>
+            <div class="carousel-slide">
+                <a href="imovel3.html">
+                    <img src="imovel3.jpg" alt="Imóvel 3">
+                    <p>Imóvel 3 - Área de Lazer Completa</p>
+                </a>
+            </div>
+        </div>
+        <button class="next">&#10095;</button>
+    </section>
+    
+    <footer style="background-color: #001F3F; color: white; padding: 15px; text-align: center;">
+        <p>Contato: <a href="https://wa.me/5521980304453" style="color: white;">+55 21 98030-4453</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/ciodaro.v" target="_blank" style="color: white;">@ciodaro.v</a></p>
+    </footer>
+</body>
+</html>
