@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóveis na Planta - Rio e Niterói</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header, .footer {
+            background-color: #004AAD;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            background: #004AAD;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #00327A;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="profile">
+            <img src="https://www.instagram.com/ciodaro.v/profile_pic" alt="Foto de perfil">
+            <h1>Imóveis na Planta - Rio e Niterói</h1>
+        </div>
+        <p>Encontre as melhores oportunidades para investir ou morar</p>
+    </div>
+    
+    <div class="container">
+        <h2>Entre em contato</h2>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Seu nome" required>
+                <input type="email" id="email" placeholder="Seu e-mail" required>
+                <textarea id="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                <button type="button" class="btn" onclick="sendToWhatsApp()">Enviar via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="profile">
+            <img src="https://www.instagram.com/ciodaro.v/profile_pic" alt="Foto de perfil">
+            <p>Contato: <a href="tel:+5521980304453" style="color: #fff; text-decoration: none;">+55 21 98030-4453</a></p>
+        </div>
+        <p>Instagram: <a href="https://www.instagram.com/ciodaro.v" target="_blank" style="color: #fff; text-decoration: none;">@ciodaro.v</a></p>
+    </div>
+    
+    <script>
+        function sendToWhatsApp() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let message = document.getElementById('message').value;
+            let phoneNumber = "5521980304453";
+            
+            let text = `Olá, meu nome é ${name}. Meu e-mail é ${email}. Gostaria de saber mais sobre imóveis! Minha mensagem: ${message}`;
+            let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+            
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
